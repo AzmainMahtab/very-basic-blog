@@ -6,7 +6,13 @@
 <body>
 {% for blog in blogs %}
 
-	<p>{{ blog.title }}</p>
+	<h2>{{ blog.title }}</h2>
+	<p><strong>{{ blog.description }}</strong></p>
+	<p>{{ blog.article }}</p>
+	<p><em>{{ blog.author }}</em></p>
+	<p>{{ blog.date }}</p>
+	<br>
+
 
 {% endfor %}
 
