@@ -4,13 +4,14 @@
 	<title></title>
 </head>
 <body>
+	<p>Auther wrote {{ count }} blog{{ count|pluralize }}</p>
 {% for blog in blogs %}
 
-	<h2>{{ blog.title }}</h2>
-	<p><strong>{{ blog.description }}</strong></p>
+	<a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+	<p><strong>{{ blog.description|truncatechars:120 }}</strong></p>
 	<p>{{ blog.article }}</p>
 	<p><em>{{ blog.author }}</em></p>
-	<p>{{ blog.date }}</p>
+	<p>{{ blog.date|date:'M d Y' }}</p>
 	<br>
 
 

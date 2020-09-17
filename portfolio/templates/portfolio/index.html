@@ -8,6 +8,7 @@
 <body>
 	{% load static %}
 	<h1>Home page</h1>
+	<a href="{% url 'blog:all_blog' %}"><h1>Blog</h1></a>
 	<img src="{% static 'portfolio/2.jpg' %}">
 	{% for project in projects %}
 		{{ project.title }}
